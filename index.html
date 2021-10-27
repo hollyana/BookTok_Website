@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Booktok books</title>
+</head>
+
+<body>
+<h1>Booktok books</h1>
+<h2>Search popular booktok books by name, author, and more</h2>
+<div class="centerenter">
+<input type="text" id="bookInput" onkeyup="bookFunction()" placeholder="name, genre, author..." title="Work search">
+</div>
+<div class="tablesearch">
+<table id="bookTable" align="center">
+<tr class="header">
+<th style="width:25%">Title</th>
+<th style="width:25%">Author</th>
+<th style="width:25%">Genres</th>
+<th style="width:25%">Rating</th>
+</tr>
+
+  <tr>
+  <td>The House in the Cerulean Sea</td>
+  <td>TJ Klune</td>
+  <td>Fantasy, Supernatural , LGBTQ+, Paranormal, Contemporary </td>
+  <td>4.5<td>
+  </tr>
+  <tr>
+  <td>The song of Achilles</td>
+  <td>Madeline Miller</td>
+  <td>Romance, Fantasy, LGBTQ+, Retelling </td>
+  <td>4.4<td>
+  </tr>
+  <tr>
+  <td>The Seven Husbands of Evelyn Hugo</td>
+  <td>Taylor Jenkins Reid</td>
+  <td>Historical fiction, Romance </td>
+  <td>4.4<td>
+  </tr>
+  <tr>
+  <td>Circe</td>
+  <td>Madeline Miller</td>
+  <td>Fantasy, Retelling </td>
+  <td>4.3<td>
+  </tr>
+  <tr>
+  <td>Red, White & Royal Blue</td>
+  <td>Casey McQuiston</td>
+  <td>Romance, LGBTQ+</td>
+  <td>4.2<td>
+  </tr>
+  <tr>
+  <td>A Court of Thorns and Roses</td>
+  <td>Sarah J. Maas</td>
+  <td>Fantasy, Romance, YA, Retelling </td>
+  <td>4.2<td>
+  </tr>
+  <tr>
+  <td>The Invisible Life of Addie LaRue</td>
+  <td>V. E. Schwab</td>
+  <td>Fantasy</td>
+  <td>4.2<td>
+  </tr>
+  <tr>
+  <td>Shadow and Bone</td>
+  <td>Leigh Bardugo</td>
+  <td>Fantasy, YA</td>
+  <td>4<td>
+  </tr>
+  <tr>
+  <td>The Midnight Library</td>
+  <td>Matt Haig</td>
+  <td>Fantasy, Contemporary, Magical </td>
+  <td>4<td>
+  </tr>
+  <tr>
+  <td>They both die at the end</td>
+  <td>Adam Silvera</td>
+  <td>Drama, YA</td>
+  <td>3.9<td>
+  </tr>
+  <tr>
+  <td>A Touch of Darkness</td>
+  <td>Scarlett St. Clair</td>
+  <td>Fantasy, Romance, Mythology, Retelling, Paranormal </td>
+  <td>3.9<td>
+  </tr>
+  <tr>
+  <td>We were liars</td>
+  <td>E. Lockhard</td>
+  <td>YA, Thriller</td>
+  <td>3.8<td>
+  </tr>
+  <tr>
+  <td>Normal People</td>
+  <td>Sally Rooney</td>
+  <td>Contemporary, Romance, Literary</td>
+  <td>3.8<td>
+  </tr>
+</table>
+</div>
+<script>function bookFunction() {
+  // Declare starting variables
+  var input = document.getElementById("bookInput");
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById("bookTable");
+  var trs = table.tBodies[0].getElementsByTagName("tr");
+  // Loop through rows
+  for (var i = 0; i < trs.length; i++) {
+    // Define the cells
+    var tds = trs[i].getElementsByTagName("td");
+    // hide the row
+    trs[i].style.display = "none";
+    // loop through row cells
+    for (var i2 = 0; i2 < tds.length; i2++) {
+      // if there's a match
+      if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        // show the row
+        trs[i].style.display = "";
+        // skip to the next row
+        continue;
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
