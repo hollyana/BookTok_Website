@@ -2,82 +2,83 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Booktok books</title>
-</head>
+<link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
+<link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
 <style>
-    * {
-      box-sizing: border-box;
-    }
-    body,#bookInput{
-      text-align: center;
-    }
-    #bookInput {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
-      background-position: 10px 10px;;
-      background-repeat: no-repeat;
-      background-size: 25px;
-      width: 60%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-      border-radius: 25px;
-    }
-    #bookInput:focus {
-      outline:none
-    }
+  * {
+    box-sizing: border-box;
+  }
+  body,#bookInput{text-align: center;}
+  #bookInput {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+    background-position: 10px 10px;;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 60%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border-radius: 25px;
+  }
+  #bookInput:focus {
+    outline:none
+  }
+  #bookTable {
+    border-collapse: collapse;
+    width: 95%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin-bottom:40px;
+  }
+  #bookTable th, #bookTable td {
+    text-align: left;
+    padding: 12px;
+    text-align: center;
 
-    #bookTable {
-      border-collapse: collapse;
-      width: 85%;
-      border: 1px solid #ddd;
-      font-size: 18px;
-      margin-bottom:40px;
-      background-color: #ffffff;
-    }
-    #bookTable th, #bookTable td {
-      text-align: left;
-      padding: 12px;
-      padding-right: 12px;
-      text-align: center;
+  }
+  #bookTable tr {
+    border-bottom: 1px solid #ddd;
 
-    }
-    #bookTable tr {
-      border-bottom: 1px solid #ddd;
-      border-right: 1px solid #ddd;
+  }
+  #bookTable tr.header, #bookTable tr:hover {
+    background-color: #f1f1f1;
 
-    }
-    #bookTable tr.header,#bookTable tr:hover {
-      background-color: #f1f1f1;
+  }
+  a {
+    color: #f56642;
+  }
 
-    }
-    a {
-      color: #f56642;
-    }
+  h2, h1, p {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  h1:hover {
+    animation-name: bookshadow;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+  }
 
-    h2, h1, p {
-      font-family: 'Nunito Sans', sans-serif;
-    }
-    body{
-      background-image: url(https://i.pinimg.com/564x/43/5a/89/435a896babeb4c691508bbaded5761c7.jpg);
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-    h1 {
-      color: #ebebeb;
-      transition: 0.3s;
-    }
+  @keyframes bookshadow {
+    from {}
+    to {text-shadow: 2px 2px 5px black;}
+  }
+  h1 {
+    color: #f56642;
+    transition: 0.3s;
+  }
 </style>
+</head>
 
 <body>
-<h1>Booktok books</h1>
+<h1><a href="https://micahlt.github.io/renart/"><b>Booktok</b></a></h1>
 <h2>Search popular booktok books by name, author, and more</h2>
 <div class="centerenter">
 <input type="text" id="bookInput" onkeyup="bookFunction()" placeholder="name, genre, author..." title="Work search">
 </div>
-
 <div class="tablesearch">
 <table id="bookTable" align="center">
 <tr class="header">
@@ -85,9 +86,10 @@
 <th style="width:25%">Author</th>
 <th style="width:25%">Genres</th>
 <th style="width:25%">Rating</th>
-<th style="width:0.5%"></th>
 </tr>
-
+div class="backgroundImage">
+  <img class="image" src="background.jpeg" alt="Library bookshelves filled with old books">
+</div>
   <tr>
   <td>The House in the Cerulean Sea</td>
   <td>TJ Klune</td>
@@ -168,6 +170,8 @@
   </tr>
 </table>
 </div>
+<p>this project was created and is maintained by <a href = "https://micahlt.github.io/">Micah Lindley</a>.&#32;Last updated 8/21/19.</p>
+
 <script>function bookFunction() {
   // Declare starting variables
   var input = document.getElementById("bookInput");
@@ -188,6 +192,7 @@
         trs[i].style.display = "";
         // skip to the next row
         continue;
+
       }
     }
   }
