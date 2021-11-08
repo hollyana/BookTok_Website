@@ -15,6 +15,8 @@ body,#bookInput{
   border: 1px solid #ddd;
   margin-bottom: 12px;
   border-radius: 25px;
+  background-color: #DDDDDD;
+
 }
 #bookInput:focus {
   outline:none
@@ -26,13 +28,15 @@ body,#bookInput{
   border: 1px solid #ddd;
   font-size: 18px;
   margin-bottom:40px;
-  background-color: #ffffff;
+  background-color: #DDB8A6;
 }
 #bookTable th, #bookTable td {
-  text-align: left;
+
   padding: 12px;
   padding-right: 12px;
   text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #7D876E;
 
 }
 #bookTable tr {
@@ -41,23 +45,47 @@ body,#bookInput{
 
 }
 #bookTable tr.header,#bookTable tr:hover {
-  background-color: #f1f1f1;
+  background-color: #D49C7E;
 
 }
-a {
-  color: #f56642;
+.titles{
+  background-color: #989E8A;
+  max-width: 1500px;
+  margin: 0px;
+  overflow: hidden;
+  max-width: none;
+  text-align: center;
+  width: 100%;
+}
+.image{
+
+}
+a:link {
+  color: #7D876E;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+a:visited{
+  color: #7D876E;
 }
 
 h2, h1, p {
   font-family: 'Nunito Sans', sans-serif;
 }
 body{
-  background-image: url(https://i.pinimg.com/564x/43/5a/89/435a896babeb4c691508bbaded5761c7.jpg);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/George-peabody-library.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
 }
-h1 {
-  color: #ebebeb;
-  transition: 0.3s;
+body, html{
+  margin:0;
+  padding:0;
+}
+h1, h2 {
+  color: rgb(137,64,3,0.76);
 }
