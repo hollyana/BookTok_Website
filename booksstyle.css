@@ -1,53 +1,54 @@
+/*-- BookTok Stylesheet --*/
+
+/* border sizing for entire page */
 * {
   box-sizing: border-box;
 }
-body,#bookInput{
-  text-align: center;
-}
-#bookInput {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
-  background-position: 10px 10px;;
-  background-repeat: no-repeat;
-  background-size: 25px;
-  width: 60%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-  border-radius: 25px;
-  background-color: #DDDDDD;
-
-}
-#bookInput:focus {
-  outline:none
-}
-
-#bookTable {
-  border-collapse: collapse;
-  width: 85%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-  margin-bottom:40px;
-  background-color: #DDB8A6;
-}
-#bookTable th, #bookTable td {
-
-  padding: 12px;
-  padding-right: 12px;
-  text-align: center;
+/*--- text styles ---*/
+/*- font for all text -*/
+h1, h2, p {
   font-family: 'Nunito Sans', sans-serif;
+}
+
+/*- heading and subheading colour and opacity -*/
+h1, h2 {
+  color: rgb(137,64,3,0.76);
+}
+
+/*-- body image and text styles --*/
+body{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/George-peabody-library.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+
+}
+
+/*- remove all automatic margins from site -*/
+body, html{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*-- link styles --*/
+/*- before press -*/
+a:link {
   color: #7D876E;
-
+  text-decoration: none;
 }
-#bookTable tr {
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
 
+/*- when hovering over -*/
+a:hover{
+  text-decoration: underline;
 }
-#bookTable tr.header,#bookTable tr:hover {
-  background-color: #D49C7E;
 
+/*- after press -*/
+a:visited{
+  color: #7D876E;
 }
+
+/*- div style for heading and subheading -*/
 .titles{
   background-color: #989E8A;
   max-width: 1500px;
@@ -57,35 +58,59 @@ body,#bookInput{
   text-align: center;
   width: 100%;
 }
-.image{
 
-}
-a:link {
-  color: #7D876E;
-  text-decoration: none;
-}
-
-a:hover{
-  text-decoration: underline;
-}
-a:visited{
-  color: #7D876E;
-}
-
-h2, h1, p {
-  font-family: 'Nunito Sans', sans-serif;
-}
-body{
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/George-peabody-library.jpg');
-  background-size: cover;
-  background-attachment: fixed;
+/*- searchbar style -*/
+#bookInput {
+  /* search icon */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+  background-position: 10px 10px;;
   background-repeat: no-repeat;
+  background-size: 25px;
+  /*- borders and text -*/
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 25px;
+  background-color: #DDDDDD;
+  text-align: center;
 
 }
-body, html{
-  margin:0;
-  padding:0;
+
+/*- removes blue outline when being used-*/
+#bookInput:focus {
+  outline:none
 }
-h1, h2 {
-  color: rgb(137,64,3,0.76);
+
+/*--- table styles ---*/
+/*- table margins, border and colour -*/
+#bookTable {
+  border-collapse: collapse;
+  width: 85%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-bottom:40px;
+  background-color: #DDB8A6;
+  table-layout: fixed;
+}
+
+/*- table header and data cell style -*/
+#bookTable th, #bookTable td {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #7D876E;
+}
+
+/*- table row style-*/
+#bookTable tr {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+
+}
+
+/*- header and hover colour -*/
+#bookTable tr.header,#bookTable tr:hover {
+  background-color: #D49C7E;
 }
