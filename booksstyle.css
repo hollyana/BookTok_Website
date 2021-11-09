@@ -3,21 +3,24 @@
 /* border sizing for entire page */
 * {
   box-sizing: border-box;
+  font-family: 'Lora', serif;
 }
 /*--- text styles ---*/
 /*- font for all text -*/
 h1, h2, p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Lora', serif;
 }
+h1{
 
+}
 /*- heading and subheading colour and opacity -*/
 h1, h2 {
-  color: rgb(137,64,3,0.76);
+  color: #C9BAA6;
 }
 
 /*-- body image and text styles --*/
 body{
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/George-peabody-library.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -34,7 +37,7 @@ body, html{
 /*-- link styles --*/
 /*- before press -*/
 a:link {
-  color: #7D876E;
+  color: #F6F2ED;
   text-decoration: none;
 }
 
@@ -45,12 +48,12 @@ a:hover{
 
 /*- after press -*/
 a:visited{
-  color: #7D876E;
+  color: #F6F2ED;
 }
 
 /*- div style for heading and subheading -*/
 .titles{
-  background-color: #989E8A;
+  background-color: #F6F2ED;
   max-width: 1500px;
   margin: 0px;
   overflow: hidden;
@@ -62,7 +65,7 @@ a:visited{
 /*- searchbar style -*/
 #bookInput {
   /* search icon */
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/1890px-Vector_search_icon.svg.png');
   background-position: 10px 10px;;
   background-repeat: no-repeat;
   background-size: 25px;
@@ -73,8 +76,9 @@ a:visited{
   border: 1px solid #ddd;
   margin-bottom: 12px;
   border-radius: 25px;
-  background-color: #DDDDDD;
+  background-color: #D6D0C8;
   text-align: center;
+  color: #AA9A8F;
 
 }
 
@@ -91,7 +95,7 @@ a:visited{
   border: 1px solid #ddd;
   font-size: 18px;
   margin-bottom:40px;
-  background-color: #DDB8A6;
+  background-color: #C9BAA6;
   table-layout: fixed;
 }
 
@@ -99,8 +103,8 @@ a:visited{
 #bookTable th, #bookTable td {
   padding: 10px;
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
-  color: #7D876E;
+  font-family: 'Noto Serif Display', serif;
+  color: #F6F2ED;
 }
 
 /*- table row style-*/
@@ -112,5 +116,13 @@ a:visited{
 
 /*- header and hover colour -*/
 #bookTable tr.header,#bookTable tr:hover {
-  background-color: #D49C7E;
+  background-color: #AA9A8F;
 }
+
+/*- colours
+#D6D0C8 - creme (table)
+#F6F2ED - white (font)
+#D1D1D0 - grey (search bar)
+#AA9A8F - pinky (table/div)
+
+-*/
